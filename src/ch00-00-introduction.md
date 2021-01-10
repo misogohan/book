@@ -8,7 +8,7 @@
 > Language][nsprust] available in print and ebook format from [No Starch
 > Press][nsp].
 -->
-> お知らせ：　本書のこの版は、[No Scratch][nsp]で入手できる
+> お知らせ：本書のこの版は、[No Scratch][nsp]で入手できる
 > [The Rust Programming Language][nsprust]（英語版）と同じ内容です。
 
 [nsprust]: https://nostarch.com/rust
@@ -390,4 +390,4 @@ The source files from which this book is generated can be found on
 
 [book-ja]: https://github.com/misogohan/book/tree/master/src
 
-> 注：　この日本語訳のソースコードは、[こちらのリポジトリ][book-ja]で確認できます。
+> 注：この日本語訳のソースコードは、[こちらのリポジトリ][book-ja]で確認できます。
