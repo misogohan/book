@@ -7,7 +7,8 @@
 Let’s start your Rust journey! There’s a lot to learn, but every journey starts
 somewhere. In this chapter, we’ll discuss:
 -->
-Rustの旅を始めましょう。学ぶべきことはたくさんありますが、旅というものには必ず始まりがあります。この章では、
+Rustの旅を始めましょう。学ぶべきことはたくさんありますが、旅というものには必ず始まりがあります。
+この章では、
 
 <!--
 * Installing Rust on Linux, macOS, and Windows

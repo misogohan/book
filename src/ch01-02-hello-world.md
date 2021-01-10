@@ -18,9 +18,9 @@ Rustをインストールし終わったので、はじめてのRustのプログ
 > has been made rapidly on that front!
 -->
 > 注意：本書は、コマンドラインの基本的な知識を前提としています。コードの保存場所や編集方法、
-> 使用するツールについて、特別何かを要求することはありません。そのため、コマンドラインの代わりに
+> 使用するツールについて、特別何かを指定することはありません。そのため、コマンドラインの代わりに
 > 統合開発環境（IDE）使用したい場合は、好きなものを使ってください。多くのIDEは、Rustのサポート
-> をある程度してくれます。詳細はIDEのドキュメントを確認してください。最近、Rustチームは。IDEが
+> をある程度してくれます。詳細はIDEのドキュメントを確認してください。最近Rustチームは、IDEが
 > 優れたサポートを提供できるようにすることに焦点を置いており、その点では急速に進歩してきています。
 
 <!--
@@ -60,7 +60,7 @@ $ cd hello_world
 <!--
 For Windows CMD, enter this:
 -->
-Windows CMDを用いる場合は、こちらです。
+WindowsのCMDを用いる場合は、こちらです。
 
 ```cmd
 > mkdir "%USERPROFILE%\projects"
@@ -145,7 +145,7 @@ If `Hello, world!` did print, congratulations! You’ve officially written a Rus
 program. That makes you a Rust programmer—welcome!
 -->
 `Hello, world!`が出力された方、おめでとうございます。あなたは正式にRustのプログラムを書いたの
-です。晴れてあなたは、Rustプログラマーの一員です。
+です。晴れてあなたは、Rustプログラマの一員です。
 
 <!--
 ### Anatomy of a Rust Program
@@ -156,8 +156,8 @@ program. That makes you a Rust programmer—welcome!
 Let’s review in detail what just happened in your “Hello, world!” program.
 Here’s the first piece of the puzzle:
 -->
-”Hello, world!”のプログラム内で何が起こったのか、詳細を見ていきましょう。今ここに、パズルの
-一つ目のピースがあります。
+”Hello, world!”のプログラム内で何が起こったのか、詳しく見ていきましょう。今ここに、パズルの
+１つ目のピースがあります。
 
 ```rust
 fn main() {
@@ -172,7 +172,8 @@ line declares a function named `main` that has no parameters and returns
 nothing. If there were parameters, they would go inside the parentheses, `()`.
 -->
 これらの行は、Rustでの関数の定義をしています。`main`関数は特別で、これは、実行可能なRustの
-プログラム内で最初に走るコードです。
+プログラム内で最初に走るコードです。１行目は、引数を持たず何も返さない`main`と名付けられた関数を
+宣言しています。引数を取りたいときは、丸括弧`()`の内側に書きます。
 
 <!--
 Also, note that the function body is wrapped in curly brackets, `{}`. Rust
@@ -181,7 +182,7 @@ curly bracket on the same line as the function declaration, adding one space in
 between.
 -->
 また、関数の本体が波括弧`{}`で囲まれていることに注意してください。Rustでは、常に関数の中身を
-波括弧で囲む必要があります。関数の宣言と同じ行に、間に空白を一つ挟んで開き波括弧を置くのは、良い
+波括弧で囲む必要があります。関数の宣言と同じ行に、間に空白を１つ挟んで開き波括弧を置くのは、良い
 書き方です。
 
 <!--
@@ -224,7 +225,7 @@ more detail in Chapter 19. For now, you just need to know that using a `!`
 means that you’re calling a macro instead of a normal function.
 -->
 ２つ目に、`println!`は、Rustのマクロを呼び出します。もしこれが関数なら、`println`（`!`無し）
-と表記されます。Rustのマクロは、第１９章でより詳細に扱います。一先ずは、関数の代わりにマクロを
+と表記されます。Rustのマクロは、第１９章でより詳細に扱います。ひと先ずは、関数の代わりにマクロを
 呼び出すためには`!`をつける必要が有るということだけ知っておいてください。
 
 <!--
@@ -251,15 +252,15 @@ end with a semicolon.
 You’ve just run a newly created program, so let’s examine each step in the
 process.
 -->
-たった今作ったプログラムを実行してみたので、それぞれのステップを検証してみましょう。
+たった今作ったプログラムを、実行してみたので、それぞれのステップを検証してみましょう。
 
 <!--
 Before running a Rust program, you must compile it using the Rust compiler by
 entering the `rustc` command and passing it the name of your source file, like
 this:
 -->
-Rustのプログラムは、実行する前にRustコンパイラーを使ってコンパイルする必要があります。この例の
-ように`rustc`のコマンドにソースファイルの名前を渡しましょう。
+Rustのプログラムは、実行する前にRustコンパイラを使ってコンパイルする必要があります。この例の
+ように`rustc`コマンドにソースファイルの名前を渡しましょう。
 
 ```console
 $ rustc main.rs
@@ -278,9 +279,9 @@ entering the `ls` command in your shell. On Linux and macOS, you’ll see two
 files. With PowerShell on Windows, you’ll see the same three files that you
 would see using CMD.
 -->
-Linux、macOS、またはWindowsのPowerShellでは、`ls`コマンドを使うことで実行ファイルを確認
-することができます。LinuxとmacOSでは、２つのファイル名が表示されます。Windowsの場合、
-PowerShellでは、CMDを使った例と同様に３つのファイルが表示されます。
+Linux、macOS、またはWindowsのPowerShellでは、`ls`コマンドを使うことで実行ファイルを確認する
+ことができます。LinuxとmacOSでは、２つのファイル名が表示されます。Windowsの場合、PowerShell
+では、CMDを使った例と同様に３つのファイルが表示されます。
 
 ```text
 $ ls
@@ -305,10 +306,9 @@ This shows the source code file with the *.rs* extension, the executable file
 Windows, a file containing debugging information with the *.pdb* extension.
 From here, you run the *main* or *main.exe* file, like this:
 -->
-*.rs*の拡張子で始まるソースコードファイル、実行ファイル（Windowsでは*main.exe*、他の
-すべての環境では*main*）、それからWindowsを使っている場合はデバッグ情報が記述されている、
-拡張子が<!-- -->*.pdb*のファイルが表示されます。*main*または*main.exe*は、このように
-実行します。
+*.rs*の拡張子で始まるソースコードファイル、実行ファイル（Windowsでは*main.exe*、他のすべての
+環境では*main*）、それからWindowsを使っている場合はデバッグ情報が記述されている、拡張子が
+*.pdb*のファイルが表示されます。*main*または*main.exe*は、このように実行します。
 
 ```console
 $ ./main # Windowsの場合は .\main.exe
@@ -333,9 +333,11 @@ compile and run your program. Everything is a trade-off in language design.
 -->
 RubyやPython、JavaScriptのような動的言語に親しんできた人は、コンパイルと実行を別のステップに
 分けて行うことに慣れていないかもしれません。Rustは事前コンパイル言語です。これは、プログラムを
-コンパイルしたあと、実行ファイルを他の誰かにあげることができ、またそれを受け取った人は、Rust
-をインストールしなくても実行できます。*.rb* や *.py*、*.js*を渡す場合、受け取った人は各々が
-それぞれRubyやPython、JavaScriptの実装をインストールする必要があります。
+コンパイルしたあと、実行ファイルを他の誰かにあげることができ、またそれを受け取った人は、Rustを
+インストールしなくても実行できることを意味します。*.rb* や *.py*、*.js*を渡す場合、受け取る人は
+各々がそれぞれRubyやPython、JavaScriptの実装をインストールする必要があります。しかし、これらの
+言語では、コンパイルと実行をするために１つのコマンドしか必要としません。全ては言語設計における
+トレードオフなのです。
 
 <!--
 Just compiling with `rustc` is fine for simple programs, but as your project

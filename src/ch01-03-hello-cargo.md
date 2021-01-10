@@ -7,8 +7,8 @@ such as building your code, downloading the libraries your code depends on, and
 building those libraries. (We call libraries your code needs *dependencies*.)
 -->
 Cargoは、Rustのビルドシステム兼パッケージマネージャーです。コードのビルド、コードが依存している
-ライブラリー（*依存関係*）のダウンロード、ダウンロードしたライブラリーのビルドなど、あなたの代わり
-に多くのことをしてくれるため、ほとんどのRustaceanはCargoを用いてプロジェクトを管理しています。
+ライブラリ（*依存関係*）のダウンロード、ダウンロードしたライブラリのビルドなど、あなたの代わりに
+多くのことをしてくれるため、ほとんどのRustaceanはCargoを用いてプロジェクトを管理しています。
 
 <!--
 The simplest Rust programs, like the one we’ve written so far, don’t have any
@@ -19,7 +19,7 @@ using Cargo, adding dependencies will be much easier to do.
 -->
 先程私たちが書いたような単純なプログラムでは、依存関係を持つことはありません。そのため、
 ”Hello, world”プロジェクトをCargoで運用する場合は、コードのビルドにしか役に立ちません。
-しかしより複雑なプログラムを書く場合には、依存関係を加えたくなるでしょう。そのようなときは、
+しかしより複雑なプログラムを書く場合には、依存関係を追加したくなるでしょう。そのようなときは、
 Cargoを使ってプロジェクトを作りはじめれば、依存関係の追加がとても簡単になります。
 
 <!--
@@ -30,8 +30,8 @@ used the official installers discussed in the
 through some other means, check whether Cargo is installed by entering the
 following into your terminal:
 -->
-Rustで書かれる大多数のプロジェクトはCargoを使っているため、本書でもこれ以降は、Cargoを使うこと
-を前提にしています。[“Installation”][installation]で紹介されている通りにRustをインストール
+Rustで書かれる大多数のプロジェクトはCargoを使っているため、本書でもここからは、Cargoを使うこと
+を前提に書かれます。[“Installation”][installation]で紹介されている通りにRustをインストール
 していれば、Cargoは既にインストールされているはずです。他の方法でRustをインストールした場合は、
 このコマンドをターミナルで実行してCargoがインストールされているか確認してください。
 
@@ -59,8 +59,8 @@ original “Hello, world!” project. Navigate back to your *projects* directory
 wherever you decided to store your code). Then, on any operating system, run
 the following:
 -->
-Cargoを使って新しいプロジェクトを作ってみて、”Hello, world!”プロジェクトのときとの違いを確認
-しましょう。*projects*（もしくはあなたがコードを保管することに決めた）ディレクトリに戻って、下の
+Cargoを使って新しいプロジェクトを作って、”Hello, world!”プロジェクトのときとの違いを確認し
+ましょう。*projects*（もしくはあなたがコードを保管することに決めた）ディレクトリに戻って、下の
 コマンドを実行してください。
 
 ```console
@@ -73,7 +73,7 @@ The first command creates a new directory called *hello_cargo*. We’ve named
 our project *hello_cargo*, and Cargo creates its files in a directory of the
 same name.
 -->
-一行目のコマンドは、*hello_cargo*という新しいディレクトリを作成します。私たちがプロジェクトを
+１行目のコマンドは、*hello_cargo*という新しいディレクトリを作成します。私たちがプロジェクトを
 *hello_cargo*と名付けたので、Cargoは同名のディレクトリ内にプロジェクトのファイルを生成します。
 
 <!--
@@ -91,7 +91,7 @@ Git files won’t be generated if you run `cargo new` within an existing Git
 repository; you can override this behavior by using `cargo new --vcs=git`.
 -->
 Cargoは、Gitのリポジトリも初期化してくれており、*.gitignore*も生成されます。既に存在するGitの
-リポジトリ内で`cargo new`を実行した場合、Gitためのファイルは生成されません。この挙動は、
+リポジトリ内で`cargo new`を実行する場合、Gitためのファイルは生成されません。この挙動は、
 `cargo new --vcs=git`とすることで回避できます。
 
 <!--
@@ -99,8 +99,9 @@ Cargoは、Gitのリポジトリも初期化してくれており、*.gitignore*
 > use a different version control system or no version control system by using
 > the `--vcs` flag. Run `cargo new --help` to see the available options.
 -->
-> 注意：Gitは一般的なバージョン管理システムです。`--vcs`フラグを使うことで、`cargo new`が
-> 別のバージョン管理システムを使う、或いはこれらを使わないように指定できます。
+> 注意：Gitは一般的なバージョン管理システムです。`--vcs`フラグを使うことで、`cargo new`が別の
+> バージョン管理システムを使う、或いはこれらを使わないように指定できます。`cargo new --help`を
+> 実行することで、使用可能な選択肢を確認できます。
 
 <!--
 Open *Cargo.toml* in your text editor of choice. It should look similar to the
@@ -130,11 +131,11 @@ new`</span>
 </span>
 
 <!--
-This file is in the [*TOML*](https://toml.io)<!-- ignore --> (*Tom’s Obvious,
+This file is in the [*TOML*](https://toml.io) (*Tom’s Obvious,
 Minimal Language*) format, which is Cargo’s configuration format.
 -->
-このファイルは、[*TOML*](https://toml.io)(*Tom’s Obvious, Minimal Language*)の形式で
-書かれています。これは、Cargoにおける設定の書き方です。
+このファイルは、[*TOML*](https://toml.io) (*Tom’s Obvious, Minimal Language*)の形式で
+書かれています。これは、Cargoにおける設定の記法です。
 
 <!--
 The first line, `[package]`, is a section heading that indicates that the
@@ -153,8 +154,8 @@ file. We’ll talk about the `edition` key in Appendix E.
 -->
 続く４行は、Cargoがプログラムをコンパイルする際に必要な情報である、名前、バージョン、作者、そして
 使用するRustのeditionを指定しています。Cargoはあなたの環境からあなたの名前とメールの情報を
-取得しているので、この情報が正しくない場合は、修正して保存してください。`edition`キーについて
-は、付録Ｅで解説します。
+取得しているので、この情報が正しくない場合は、修正して保存してください。`edition`キーについては、
+付録Ｅで解説します。
 
 <!--
 The last line, `[dependencies]`, is the start of a section for you to list any
@@ -189,8 +190,8 @@ wrote in Listing 1-1! So far, the differences between our previous project and
 the project Cargo generates are that Cargo placed the code in the *src*
 directory, and we have a *Cargo.toml* configuration file in the top directory.
 -->
-リスト１－１で私たちが書いた”Hello, world!”のプログラムと同じものが生成されています。ここまでで
-、前節の”Hello, world!”プロジェクトとCargoが生成したこのプロジェクトの異なる点は、Cargoが
+リスト１－１で私たちが書いた”Hello, world!”のプログラムと同じものが生成されています！ ここまで
+で前節の”Hello, world!”プロジェクトとCargoが生成したこのプロジェクトの異なる点は、Cargoが
 コードを*src*ディレクトリに置いていることと、設定ファイルの*Cargo.toml*がプロジェクト
 ディレクトリの最上層に存在することです。
 
@@ -201,10 +202,10 @@ configuration files, and anything else not related to your code. Using Cargo
 helps you organize your projects. There’s a place for everything, and
 everything is in its place.
 -->
-Cargoは、ソールファイルを*src*ディレクトリに置くことを予期しています。プロジェクトディレクトリ
-の最上層には、READMEとライセンス情報、設定ファイル、その他コード自体に関係のないものを置き
-ましょう。Cargoを使うと、プロジェクトの管理がしやすくなります。すべてのものは、設置するべき場所
-が定められており、その場所にすべては設置するべきです。
+Cargoは、ソールファイルを*src*ディレクトリに置くことを要求しています。プロジェクトディレクトリ
+の最上層には、READMEファイルとライセンス情報、設定ファイル、その他コード自体に関係のないものを
+置きましょう。Cargoを使うと、プロジェクトの管理がしやすくなります。すべてのものは、設置するべき
+場所が定められており、その場所にすべては設置するべきです。
 
 <!--
 If you started a project that doesn’t use Cargo, as we did with the “Hello,
@@ -226,8 +227,8 @@ Now let’s look at what’s different when we build and run the “Hello, world
 program with Cargo! From your *hello_cargo* directory, build your project by
 entering the following command:
 -->
-さて、Cargoを使って”Hello, world!”のプログラムをビルド、実行する方法を見てみましょう。下の
-コマンドを実行してプロジェクトをビルドします。
+さて、Cargoを使って”Hello, world!”のプログラムをビルド、実行する方法を見てみましょう！
+*hello_cargo*ディレクトリで下のコマンドを実行して、プロジェクトをビルドします。
 
 ```console
 $ cargo build
@@ -240,7 +241,7 @@ This command creates an executable file in *target/debug/hello_cargo* (or
 *target\debug\hello_cargo.exe* on Windows) rather than in your current
 directory. You can run the executable with this command:
 -->
-このコマンドは、実行ファイルを生成します。ファイルは現在のディレクトリにではなく、
+このコマンドは、実行ファイルを生成します。ファイルは現在のディレクトリではなく、
 *target/debug/hello_cargo*（Windowsであれば*target\debug\hello_cargo.exe*）にあり
 ます。この実行ファイルは、このコマンドによって実行することができます。
 
@@ -269,7 +270,7 @@ We just built a project with `cargo build` and ran it with
 code and then run the resulting executable all in one command:
 -->
 `cargo build`でビルドし、`./target/debug/hello_cargo`で実行しましたが、`cargo run`を
-使えばコードのコンパイルと実行をすべて、一つのコマンドで行なえます。
+使えばコードのコンパイルと実行をすべて、１つのコマンドで行なえます。
 
 ```console
 $ cargo run
@@ -284,9 +285,9 @@ Notice that this time we didn’t see output indicating that Cargo was compiling
 the binary. If you had modified your source code, Cargo would have rebuilt the
 project before running it, and you would have seen this output:
 -->
-今回は`hello_cargo`をコンパイルしていることを示す出力がなかったことに気づいたでしょうか。Cargo
-は、ファイルが変更されていないことを発見し、バイナリーの実行だけをしたのです。ソースコードを
-変更すると、Cargoは実行する前にビルドし直し、このように出力されます。
+今回はCargoが`hello_cargo`をコンパイルしていることを示す出力がなかったことに、気づいたでしょう
+か。Cargoは、ファイルが変更されていないことを発見し、バイナリの実行だけをしたのです。ソースコード
+を変更すると、Cargoは実行する前にビルドし直し、このように出力されます。
 
 ```console
 $ cargo run
@@ -317,11 +318,11 @@ speed up the process! As such, many Rustaceans run `cargo check` periodically
 as they write their program to make sure it compiles. Then they run `cargo
 build` when they’re ready to use the executable.
 -->
-何のためにこのようなコマンドを作ったのでしょうか。`cargo check`は、実行ファイルの生成の手順
-を飛ばすため、大抵の場合、`cargo build`に比べて極めて高速です。書いているコードを頻繁に確認し
-たくなるときは、`cargo check`を使うと確認作業が速くなります。このように、多くのRustaceanは
-定期的に`cargo check`を実行することで、書いているプログラムがコンパイルされることを確認してい
-ます。そして、実行ファイルを使う準備ができたら、`cargo build`を実行します。
+何のためにこのようなコマンドを作ったのでしょうか。`cargo check`は、実行ファイルの生成の手順を
+飛ばすため、大抵の場合、`cargo build`に比べて極めて高速です。書いているコードを頻繁に確認したく
+なるときは、`cargo check`を使うと確認作業が速くなります。このように、多くのRustaceanは定期的
+に`cargo check`を実行することで、書いているプログラムがコンパイルされることを確認しています。
+そして、実行ファイルを使う準備ができたら、`cargo build`を実行します。
 
 <!--
 Let’s recap what we’ve learned so far about Cargo:
@@ -339,7 +340,7 @@ Cargoについてここまでに学習してきたことを、復習しましょ
 * `cargo run`を使うことでビルドと実行をひとまとめに行える
 * `cargo check`を使うことで、エラーを確認するためにバイナリを生成することなくプロジェクトを
   ビルドできる
-* Cargoはビルド結果を、コードと同じディレクトリではなく*target/debug*に保存します。
+* Cargoは、ビルド結果をコードと同じディレクトリではなく*target/debug*に保存する
 
 <!--
 An additional advantage of using Cargo is that the commands are the same no
@@ -385,9 +386,9 @@ With simple projects, Cargo doesn’t provide a lot of value over just using
 With complex projects composed of multiple crates, it’s much easier to let
 Cargo coordinate the build.
 -->
-単純なプロジェクトでCargoを使っても、`rustc`を使うとき以上の価値は発揮されませんが、プログラムが複雑
-になっていくにつれて、その価値は明らかなものになることでしょう。複数のクレートから構成されるような複雑な
-プロジェクトでは、Cargoにビルドの調整をしてもらうほうが遥かに簡単です。
+単純なプロジェクトでCargoを使っても、`rustc`を使うとき以上の価値は発揮されませんが、プログラム
+が複雑になっていくにつれて、その価値は明らかなものになることでしょう。複数のクレートから構成される
+ような複雑なプロジェクトでは、Cargoにビルドの調整をしてもらうほうが遥かに簡単です。
 
 <!--
 Even though the `hello_cargo` project is simple, it now uses much of the real
@@ -397,7 +398,7 @@ using Git, change to that project’s directory, and build:
 -->
 `hello_cargo`プロジェクトは単純ではありますが、これからRustと共に積み上げていくキャリアの中で
 実際に使うことになるツールのほとんどを、使っています。実際、既存のどのプロジェクトで作業する場合
-でも、以下のコマンドを使えばGitを使ってコードを取得してそのプロジェクトのディレクトリに移り、
+でも、以下のコマンドを使えば、Gitを使ってコードを取得してそのプロジェクトのディレクトリに移り、
 そしてビルドすることができます。
 
 ```console
@@ -422,8 +423,8 @@ Cargoについての詳細は、[Cargoのドキュメント][its documentation]�
 You’re already off to a great start on your Rust journey! In this chapter,
 you’ve learned how to:
 -->
-あなたはRustの旅へ向けて、既に素晴らしいスタートを切っています。この章では、これらのことを学び
-ました。
+あなたはRustの旅へ向けて、既に素晴らしいスタートを切っています。この章では、これらのことを
+学びました。
 
 <!--
 * Install the latest stable version of Rust using `rustup`

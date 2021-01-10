@@ -8,16 +8,16 @@ The first step is to install Rust. We’ll download Rust through `rustup`, a
 command line tool for managing Rust versions and associated tools. You’ll need
 an internet connection for the download.
 -->
-Rustをインストールするための最初のステップは、Rust自体のバージョンや関連するツールを
-管理するためのコマンドラインツールである`rustup`を通して、Rustをダウンロードすることです。
-ダウンロードにはインターネット接続が必要です。
+Rustをインストールするための最初のステップは、Rust自体のバージョンや関連するツールを管理するため
+のコマンドラインツールである`rustup`を通して、Rustをダウンロードすることです。ダウンロードには
+インターネット接続が必要です。
 
 <!--
 > Note: If you prefer not to use `rustup` for some reason, please see [the Rust
 > installation page](https://www.rust-lang.org/tools/install) for other options.
 -->
-> 注：何かしらの理由で`rustup`を使いたくない場合は、[the Rust installation page
-> ](https://www.rust-lang.org/tools/install) （英語）を読んで他の方法を確認してください。
+> 注意：何かしらの理由で`rustup`を使いたくない場合は、[the Rust installation page（英語）
+> ](https://www.rust-lang.org/tools/install) を読んで他の方法を確認してください。
 
 <!--
 The following steps install the latest stable version of the Rust compiler.
@@ -27,11 +27,11 @@ differ slightly between versions, because Rust often improves error messages
 and warnings. In other words, any newer, stable version of Rust you install
 using these steps should work as expected with the content of this book.
 -->
-それから、最新の安定版Rustコンパイラーをインストールします。Rustの安定性の保証のおかげで、新しい
-バージョンのコンパイラーであっても、本書でコンパイルできる例として掲載しているものはすべて、
-継続してコンパイルが可能です。コンパイラーの出力は、僅かではありますが異なることがあります。これは
-、Rustがエラーメッセージや警告の文章をしばしば改善するためです。言い換えれば、1.48以降の安定版
-バージョンのRustであれば、どれをインストールしても本書の想定通りに進められるということです。
+その次に、最新の安定版Rustコンパイラをインストールします。Rustの安定性の保証のおかげで、新しい
+バージョンのコンパイラであっても、本書でコンパイルできる例として掲載しているものはすべて、継続して
+コンパイル可能です。コンパイラの出力は、僅かではありますが異なることがあります。これは、Rustが
+エラーメッセージや警告の文章をしばしば改善するためです。言い換えれば、1.48以降の安定版バージョンの
+Rustであれば、どれをインストールしても本書の想定通りに進められるということです。
 
 <!--
 > ### Command Line Notation
@@ -85,12 +85,12 @@ the correct linker. Check your platform’s documentation for how to install a C
 compiler. Also, some common Rust packages depend on C code and will need a C
 compiler. Therefore, it might be worth installing one now.
 -->
-加えて、なにかしらのリンカーが必要です。多くの場合既にインストールされていると思いますが、Rustで
-書いたプログラムを実際にコンパイルしてみようとして、リンカーを実行できないというエラーが表示される
-場合は、その環境にリンカーがインストールされていないということなので、手動でインストールする必要が
-あります。通常、C言語のコンパイラーには適切なリンカーがついてきます。さらに、Rustのパッケージには
-C言語のコードに依存しているものもあります。 今のうちからC言語のコンパイラーをインストールする価値
-はあるでしょう。
+加えて、なにかしらのリンカが必要です。多くの場合既にインストールされていると思いますが、Rustで
+書いたプログラムを実際にコンパイルしてみようとして、リンカを実行できないというエラーが表示される
+場合は、その環境にリンカがインストールされていないということなので、手動でインストールする必要が
+あります。通常、C言語のコンパイラには適切なリンカがついてきます。さらに、よく使用されるRustの
+パッケージには、C言語のコードに依存しているものがあります。C言語のコンパイラを今のうちから
+インストールしておく価値は、あるでしょう。
 
 <!--
 ### Installing `rustup` on Windows
@@ -103,7 +103,8 @@ the instructions for installing Rust. At some point in the installation, you’l
 receive a message explaining that you’ll also need the C++ build tools for
 Visual Studio 2013 or later. The easiest way to acquire the build tools is to
 install [Build Tools for Visual Studio 2019][visualstudio]. When asked which
-workloads to install make sure "C++ build tools" is selected and that the Windows 10 SDK and the English language pack components are included.
+workloads to install make sure "C++ build tools" is selected and that the 
+Windows 10 SDK and the English language pack components are included.
 -->
 Windowsへのインストールは、[https://www.rust-lang.org/ja/tools/install][install]の
 指示にしたがって行ってください。インストールに際して、Visual Studio 2013以降用の
@@ -186,9 +187,9 @@ a number of places you can get help. The easiest is the #beginners channel on
 resources include [the Users forum][users] and [Stack Overflow][stackoverflow].
 -->
 この通りに出力されていれば、Rustのインストールは正常に完了したということになります。Windowsを
-使っていてこの通りに出力されていない場合は、Rustが`%PATH%`環境変数に含まれていることを確認
-してください。問題ないのにそれでもRustが動かないときは、助けを得られる場所がいくつもあります。
-最も簡単なのは、[Rust公式Discord][discord]の#beginnersチャンネルです。ここでは、あなたを
+使っていてこの通りに出力されていない場合は、Rustが`%PATH%`環境変数に含まれていることを確認して
+ください。問題ないのにそれでもRustが動かないときは、助けを得られる場所がいくつかあります。最も
+簡単なのは、[Rust公式Discord][discord]の #beginners チャンネルです。ここでは、あなたを
 助けてくれるRustacean（Rustユーザーが自分たちを指して呼ぶときのニックネーム）たちとチャット
 できます。その他の素晴らしい情報源として、[ユーザーフォーラム][users]と[Stack Overflow
 ][stackoverflow]があります。
@@ -207,7 +208,7 @@ The installation of Rust also includes a copy of the documentation locally, so
 you can read it offline. Run `rustup doc` to open the local documentation in
 your browser.
 -->
-Rustのインストールの際には、ドキュメントのローカルのコピーもついてくるので、オフラインで読むこと
+Rustのインストールの際には、ドキュメントのローカルのコピーもついてくるので、オフラインでも読むこと
 ができます。ローカルのドキュメントを開くには、`rustup doc`を実行してください。
 
 <!--
@@ -215,6 +216,5 @@ Any time a type or function is provided by the standard library and you’re not
 sure what it does or how to use it, use the application programming interface
 (API) documentation to find out!
 -->
-標準ライブラリーから提供されている型や関数が、何をするものでどのように使えばよいのかわからないとき
-は、アプリケーション・プログラミング・インターフェース（API）ドキュメントを使って調べてみましょう
-！
+標準ライブラリから提供されている型や関数が、何をするものでどのように使えばよいのか解らないときは、
+アプリケーション・プログラミング・インターフェース（API）ドキュメントを使って調べてみましょう！

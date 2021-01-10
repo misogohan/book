@@ -24,10 +24,10 @@ to control low-level details (such as memory usage) without all the hassle
 traditionally associated with such control.
 -->
 *プログラミング言語Rust*へようこそ。これはRustへの入門書です。Rust言語は、高速で信頼性の高い
-ソフトウェアを書く手助けをしてくれます。抽象度の高さによる扱いやすさと低レイヤーの制御は、相容れ
-ないプログラミング言語の設計方針である事が多いです。しかしながら、Rustはこの問題の解決に挑戦して
-います。強力な技術的能力と素晴らしい開発体験を両立させることを通して、Rustは低レイヤーの細かな
-制御（メモリの管理など）を、関連する面倒ごとなしに行うための選択肢をもたらします。
+ソフトウェアを書く手助けをしてくれます。抽象度の高さによる扱いやすさと低レイヤの制御は、相容れない
+プログラミング言語の設計方針である事が多いです。しかしながら、Rustはこの問題の解決に挑戦してい
+ます。強力な技術的能力と素晴らしい開発体験を両立させることを通して、Rustは低レイヤの細かな制御
+（メモリの管理など）を、関連する面倒ごとなしに行うための選択肢をもたらします。
 
 <!--
 ## Who Rust Is For
@@ -57,11 +57,11 @@ alongside the compiler, the team can spend their time focusing on the program’
 logic rather than chasing down bugs.
 -->
 Rustは、異なる能力の開発者が大きなチームで協力して開発することを、より生産的にしてくれるツール
-です。低レイヤーのコードは、様々な種類の微小なバグが発生しやすく、他のほとんどのプログラミング言語
+です。低レイヤのコードは、様々な種類の微小なバグが発生しやすく、他のほとんどのプログラミング言語
 では、網羅的なテストと経験豊富な人によるコードレビューを行うことでしか、そのようなバグを発見する
 ことはできませんでした。一方Rustでは、この様に発見しづらかったり、並列処理に伴って発生したりする
-バグを、コンパイラーが拒否します。さながら門番のようですね。コンパイラーを活用することで、
-バグの追跡ではなくプログラムのロジックに集中できるようになります。
+バグを、コンパイラが拒否します。さながら門番のようですね。コンパイラを活用することで、バグの追跡
+ではなくプログラムのロジックに集中できるようになります。
 
 <!--
 Rust also brings contemporary developer tools to the systems programming world:
@@ -104,8 +104,8 @@ make systems concepts more accessible to more people, especially those new to
 programming.
 -->
 Rustは、システムの概念を学ぶことに興味を持つ学生にとって、良い選択となるでしょう。多くの人が、
-Rustを使ってOSの開発などを学んでいます。コミュニティーは学生の皆さんを歓迎しており、質問にも喜ん
-で答えてくれるでしょう。Rustチームはこの入門書の執筆などの取り組みを通して、システムの概念を、
+Rustを使ってOSの開発などを学んでいます。コミュニティは学生の皆さんを歓迎しており、質問にも喜んで
+答えてくれるでしょう。Rustチームはこの入門書の執筆などの取り組みを通して、システムの概念を、
 プログラミング初心者も含むより多くの人にとって身近なものにしたいと考えています。
 
 <!--
@@ -120,10 +120,9 @@ embedded devices, audio and video analysis and transcoding, cryptocurrencies,
 bioinformatics, search engines, Internet of Things applications, machine
 learning, and even major parts of the Firefox web browser.
 -->
-大小を問わず何百もの企業が、様々な製品にRustを使用しています。これらの製品には、コマンドライン
-ツールやWebサービス、DevOpsツール、組み込み端末、音声及び画像の分析と処理、暗号通貨、
-生命情報科学、検索エンジン、IoTアプリケーション、機械学習そしてWebブラウザーのFirefoxなどが
-あります。
+大小何百もの企業が、様々な製品にRustを使用しています。これらの製品には、コマンドラインツールや
+Webサービス、DevOpsツール、組み込み端末、音声及び画像の分析と処理、暗号通貨、生命情報科学、
+検索エンジン、IoTアプリケーション、機械学習そしてWebブラウザのFirefoxなどがあります。
 
 <!--
 ### Open Source Developers
@@ -135,8 +134,8 @@ Rust is for people who want to build the Rust programming language, community,
 developer tools, and libraries. We’d love to have you contribute to the Rust
 language.
 -->
-Rustは、Rust言語やそのコミュニティー、開発者ツールそしてライブラリーなどを開発したいと考えている
-人たちにとっても有用です。私たちは、皆さんがRust言語の発展に寄与してくれることを期待しています。
+Rustは、Rust言語やそのコミュニティ、開発者ツールそしてライブラリなどを開発したいと考えている人
+たちにとっても有用です。私たちは、皆さんがRust言語の発展に寄与してくれることを期待しています。
 
 <!--
 ### People Who Value Speed and Stability
@@ -155,10 +154,10 @@ endeavors to make safe code be fast code as well.
 -->
 Rustは、プログラミング言語に速度と安定性を求めている人々にとっても良い言語です。速度というのは、
 Rustによって生成できるプログラムの実行速度とプログラムを書く速度の両方のことを指します。Rustの
-コンパイラーのチェックは、機能の追加やリファクタリングを安定して行えることを保証します。これは、
+コンパイラのチェックは、機能の追加やリファクタリングを安定して行えることを保証します。これは、
 こういったチェックを行わない言語で書かれていて脆弱な、修正をするのも恐ろしいレガシーコードとは
 対照的です。またRustは、安全性と速度を両立するコードを実現するために、ゼロコストの抽象化を追求
-しています。このおかげで、自ら低レイヤーでコードを書くのと同程度に速いコードを書くことができます。
+しています。このおかげで、自ら低レイヤでコードを書くのと同程度に速いコードを書くことができます。
 
 <!--
 The Rust language hopes to support many other users as well; those mentioned
@@ -168,9 +167,9 @@ decades by providing safety *and* productivity, speed *and* ergonomics. Give
 Rust a try and see if its choices work for you.
 -->
 ここに挙げた人たちは、最大の利害関係者のうちのほんの一部でしかありません。Rust言語は、これ以外に
-も多くのユーザーをサポートしたいと考えています。Rustが全てにおいて目指していることは、
-プログラマーが数十年に渡って甘受してきたトレードオフを取り払うことです。この目的を達成するために
-、安全*かつ*生産的そして高速*かつ*扱いやすいプログラミング言語を提供しようとしています。
+も多くのユーザーをサポートしたいと考えています。Rustが全てにおいて目指していることは、プログラマが
+数十年に渡って甘受してきたトレードオフを取り払うことです。この目的を達成するために、
+安全*かつ*生産的そして高速*かつ*扱いやすいプログラミング言語を提供しようとしています。
 
 <!--
 ## Who This Book Is For
@@ -212,7 +211,7 @@ chapters. In concept chapters, you’ll learn about an aspect of Rust. In projec
 chapters, we’ll build small programs together, applying what you’ve learned so
 far. Chapters 2, 12, and 20 are project chapters; the rest are concept chapters.
 -->
-本書には、コンセプトの章とプロジェクトの章の二種類の章があります。コンセプトの章では、Rustの特徴
+本書には、コンセプトの章とプロジェクトの章の２種類の章があります。コンセプトの章では、Rustの特徴
 を学びます。プロジェクトの章では、そこまでで学んだ内容を踏まえて小さなプログラムを書いてみます。
 第２章、第１２章、及び第２０章はプロジェクトの章で、それ以外はコンセプトの章です。
 
@@ -254,7 +253,7 @@ explores Rust’s error-handling philosophy and techniques.
 -->
 第７章では、Rustのモジュールシステムと、コードや公開のAPI（Application Programming
 Interface）を管理するためのプライバシールールについて学びます。第８章では、配列や文字列、
-ハッシュマップなど、標準ライブラリーが提供する構造体の内のいくつかを紹介します。第９章では、Rust
+ハッシュマップなど、標準ライブラリが提供する構造体の内のいくつかを紹介します。第９章では、Rust
 のエラーハンドリングにおける考え方と方法について探求します。
 
 <!--
@@ -279,10 +278,10 @@ depth and talk about best practices for sharing your libraries with others.
 Chapter 15 discusses smart pointers that the standard library provides and the
 traits that enable their functionality.
 -->
-第１３章では、関数型プログラミング言語に由来するクロージャーとイテレーターについて理解します。
-第１４章では、Cargoについてより深くまで学んだ後、自作ライブラリーを共有する最善の方法を紹介し
-ます。第１５章では、標準ライブラリーが提供し、トレイトによって実現されているスマートポインター
-を紹介します。
+第１３章では、関数型プログラミング言語に由来するクロージャとイテレータについて理解します。
+第１４章では、Cargoについてより深くまで学んだ後、自作ライブラリを共有する最善の方法を紹介し
+ます。第１５章では、標準ライブラリが提供し、トレイトによって実現されているスマートポインタを紹介し
+ます。
 
 <!--
 In Chapter 16, we’ll walk through different models of concurrent programming
@@ -302,13 +301,13 @@ more about lifetimes, traits, types, functions, and closures.
 -->
 第１８章では、Rustであなたのアイデアを表現するための強力な方法である、パターン、そしてパターン
 マッチングについて言及します。第１９章には、マクロや安全性が保証されないRustの書き方、他にも
-ライフタイムやトレイト、型、関数、クロージャーについての発展的な話題がいくつも含まれています。
+ライフタイムやトレイト、型、関数、クロージャについての発展的な話題がいくつも含まれています。
 
 <!--
 In Chapter 20, we’ll complete a project in which we’ll implement a low-level
 multithreaded web server!
 -->
-そして第２０章では、マルチスレッドで動くWebサーバーを低レイヤーで実装します。
+そして第２０章では、マルチスレッドで動くWebサーバーを低レイヤで実装します。
 
 <!--
 Finally, some appendices contain useful information about the language in a
@@ -319,7 +318,7 @@ tools, and Appendix E explains Rust editions.
 -->
 巻末には、いくつかの付録があります。ここにはRust言語についての有用な情報が、リファレンスに近い
 形式で載っています。付録ＡにはRustのキーワード、付録ＢにはRustの演算子とシンボル、付録Ｃには
-標準ライブラリーのトレイト、付録Ｄには便利な開発ツール、そして付録ＥにはRustのエディション
+標準ライブラリのトレイト、付録Ｄには便利な開発ツール、そして付録ＥにはRustのエディション
 についての情報が、それぞれ掲載されています。
 
 <!--
@@ -342,9 +341,9 @@ and run a random example, it may not compile! Make sure you read the
 surrounding text to see whether the example you’re trying to run is meant to
 error. Ferris will also help you distinguish code that isn’t meant to work:
 -->
-Rustを学ぶ上で特に重要なことは、コンパイラーが出力するエラーメッセージの読み方を知ることです。
+Rustを学ぶ上で特に重要なことは、コンパイラが出力するエラーメッセージの読み方を知ることです。
 エラーメッセージは、コードを正常に動作する方法を教えてくれます。エラーメッセージの読み方を知って
-もらうために、コンパイルできないコードの例をコンパイラーが出力するエラーメッセージとともに掲載する
+もらうために、コンパイルできないコードの例を、コンパイラが出力するエラーメッセージとともに掲載する
 ことがあります。そのため、例を適当に選んで実行しようとしたらコンパイルできなかった、ということが
 起こりうることに気をつけてください。必ず周囲の文章を確認して、実行しようとしているコードがエラーに
 なることを予期して例示されているものかどうかを確認してください。フェリスは、そのコードが動くかどう
@@ -386,4 +385,4 @@ The source files from which this book is generated can be found on
 
 [book-ja]: https://github.com/misogohan/book/tree/master/src
 
-> 注：この日本語訳のソースコードは、[こちらのリポジトリ][book-ja]で確認できます。
+> 訳注：この日本語訳のソースコードは、[こちらのリポジトリ][book-ja]で確認できます。

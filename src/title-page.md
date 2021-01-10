@@ -54,8 +54,8 @@ Rust 2018 Editionでは、Rustをより学習しやすくまた直感的に扱�
 - The “Advanced Lifetimes” section in Chapter 19 was removed because compiler
   improvements have made the constructs in that section even rarer.
 -->
-- 第１９章の「発展的なライフタイム」という節は削除されました。コンパイラーの改善によって、この節
-  にあったような書き方は滅多にされなくなったためです。
+- 第１９章の「発展的なライフタイム」という節は削除されました。コンパイラの改善によって、この節に
+  あったような書き方は滅多にされなくなったためです。
 
 <!--
 - The previous Appendix D, “Macros,” has been expanded to include procedural
@@ -91,7 +91,7 @@ that compiled will continue to compile without `edition="2018"` in the
 project’s *Cargo.toml*, even as you update the Rust compiler version you’re
 using. That’s Rust’s backward compatibility guarantees at work!
 -->
-Rustコンパイラーのバージョンを上げても、プロジェクト内の*Cargo.toml*に`edition="2018"`を
+Rustコンパイラのバージョンを上げても、プロジェクト内の*Cargo.toml*に`edition="2018"`を
 書かなければ、以前の版で本書に掲載されていたコードをコンパイルできます。Rustの後方互換性は維持
 されています。
 
