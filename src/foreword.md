@@ -22,9 +22,9 @@ even those who practice it do so with caution, lest their code be open to
 exploits, crashes, or corruption.
 -->
 メモリ管理やデータ表現、並列処理を低レイヤで扱う「システムレベル」のプログラミングを例に取って見
-ましょう。この分野でのプログラミングは難解で、経験を積んだ選ばれしものにのみ可能なものとされてい
-ます。またそういう人であっても、悪用やクラッシュ、データの破損が起きないように、細心の注意を払って
-プログラミングをしなければなりません。
+ましょう。伝統的に、悪名高い落とし穴を避けるために、必要な年数を学習に捧げてきた少数の選ばれしもの
+にのみ可能なものとされています。またそういう人であっても、悪用やクラッシュ、データの破損が起きない
+ように、細心の注意を払ってプログラミングをしなければなりません。
 
 <!--
 Rust breaks down these barriers by eliminating the old pitfalls and providing a
