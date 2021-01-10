@@ -31,58 +31,37 @@ Rust 2018 Editionでは、Rustをより学習しやすくまた直感的に扱�
 - Chapter 7, “Managing Growing Projects with Packages, Crates, and Modules,”
   has been mostly rewritten. The module system and the way paths work in the
   2018 Edition were made more consistent.
--->
-- 第７章「パッケージ、クレート及びモジュールによるプロジェクトの管理」はほとんどが書き直されてい
-  ます。2018 Editionからのモジュールシステムとパスの仕組みは、より高い一貫性を持つようになりま
-  した。
-
-<!--
 - Chapter 10 has new sections titled “Traits as Parameters” and “Returning
   Types that Implement Traits” that explain the new `impl Trait` syntax.
--->
-- 第１０章には「引数としてのトレイト」と「トレイトを実装している型の返却」という節が追加されまし
-  た。これらの節では、新しく追加された`impl Trait`構文について解説しています。
-
-<!--
 - Chapter 11 has a new section titled “Using `Result<T, E>` in Tests” that
   shows how to write tests that use the `?` operator.
--->
-- 第１１章には「`Result<T, E>`のテストでの使用」という節が追加されました。この節では`?`演算子
-  を使ってテストを書く方法を紹介しています。
-
-<!--
 - The “Advanced Lifetimes” section in Chapter 19 was removed because compiler
   improvements have made the constructs in that section even rarer.
--->
-- 第１９章の「発展的なライフタイム」という節は削除されました。コンパイラの改善によって、この節に
-  あったような書き方は滅多にされなくなったためです。
-
-<!--
 - The previous Appendix D, “Macros,” has been expanded to include procedural
   macros and was moved to the “Macros” section in Chapter 19.
--->
-- もともと付録Ｄとして載っていた「マクロ」は、手続き的マクロの解説も含むようになり、また第１９章
-  に移されました。
-
-<!--
 - Appendix A, “Keywords,” also explains the new raw identifiers feature that
   enables code written in the 2015 Edition and the 2018 Edition to interoperate.
--->
-- 付録Ａ「キーワード」では、生識別子（raw identifier 適切な訳語求む）という新しい機能について
-  も解説されるようになりました。この機能は、2015 Editionと2018 Editionそれぞれの書き方で
-  書かれたコードを同時に使用できるようにしてくれます。
-
-<!--
 - Appendix D is now titled “Useful Development Tools” and covers recently
   released tools that help you write Rust code.
--->
-- 付録Ｄは「有用な開発ツール」という内容になりました。Rustのコードを書くときに便利なツールを紹介
-  しています。
-
-<!--
 - We fixed a number of small errors and imprecise wording throughout the book.
   Thank you to the readers who reported them!
 -->
+- 第７章「パッケージ、クレート及びモジュールによる成長するプロジェクトの管理」は、ほとんどが
+  書き直されています。2018 Editionからのモジュールシステムとパスの仕組みは、より高い一貫性を
+  持つようになりました。
+- 第１０章には「引数としてのトレイト」と「トレイトを実装している型の返却」という節が追加されまし
+  た。これらの節では、新しく追加された`impl Trait`構文について解説しています。
+- 第１１章には「`Result<T, E>`のテストでの使用」という節が追加されました。この節では`?`演算子
+  を使ってテストを書く方法を紹介しています。
+- 第１９章の「発展的なライフタイム」という節は削除されました。コンパイラの改善によって、この節に
+  あったような書き方は滅多にされなくなったためです。
+- もともと付録Ｄとして載っていた「マクロ」は、手続き的マクロの解説も含むようになり、また第１９章
+  に移されました。
+- 付録Ａ「キーワード」では、生識別子（raw identifier 適切な訳語求む）という新しい機能について
+  も解説されるようになりました。この機能は、2015 Editionと2018 Editionそれぞれの書き方で
+  書かれたコードを同時に使用できるようにしてくれます。
+- 付録Ｄは「有用な開発ツール」という内容になりました。Rustのコードを書くときに便利なツールを紹介
+  しています。
 - 他にも細かな訂正がいくつかありました。報告してくださった方々はありがとうございました。
 
 <!--
