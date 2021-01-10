@@ -422,7 +422,8 @@ Cargoについての詳細は、[Cargoのドキュメント][its documentation]�
 You’re already off to a great start on your Rust journey! In this chapter,
 you’ve learned how to:
 -->
-あなたは既に、Rustの旅の素晴らしいスタートを切っています。この章では、これらのことを学びました。
+あなたはRustの旅へ向けて、既に素晴らしいスタートを切っています。この章では、これらのことを学び
+ました。
 
 <!--
 * Install the latest stable version of Rust using `rustup`
