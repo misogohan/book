@@ -395,7 +395,7 @@ tooling you’ll use in the rest of your Rust career. In fact, to work on any
 existing projects, you can use the following commands to check out the code
 using Git, change to that project’s directory, and build:
 -->
-`hello_cargo`プロジェクトは単純ではありますが、Rustと共に積んでいくこれからのキャリアの中で
+`hello_cargo`プロジェクトは単純ではありますが、これからRustと共に積み上げていくキャリアの中で
 実際に使うことになるツールのほとんどを、使っています。実際、既存のどのプロジェクトで作業する場合
 でも、以下のコマンドを使えばGitを使ってコードを取得してそのプロジェクトのディレクトリに移り、
 そしてビルドすることができます。
