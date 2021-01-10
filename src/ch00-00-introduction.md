@@ -72,18 +72,14 @@ Rustは、システムプログラミングの世界に現代的な開発ツー�
 * Cargo, the included dependency manager and build tool, makes adding,
   compiling, and managing dependencies painless and consistent across the Rust
   ecosystem.
+* Rustfmt ensures a consistent coding style across developers.
+* The Rust Language Server powers Integrated Development Environment (IDE)
+  integration for code completion and inline error messages.
 -->
 * Cargoという依存関係マネージャー兼ビルドツールがRustには付属しています。Cargoは、依存関係
   の追加、コンパイル及び管理を容易にしてくれます。Cargoのおかげで、Rustのエコシステムは一貫性の
   とれたものになっています。
-<!--
-* Rustfmt ensures a consistent coding style across developers.
--->
 * Rustfmtは、開発者間でコーディングスタイルを統一する簡単な方法を提供してくれます。
-<!--
-* The Rust Language Server powers Integrated Development Environment (IDE)
-  integration for code completion and inline error messages.
--->
 * Rust Language Serverは、統合開発環境（IDE）がコード補完やインラインエラーメッセージを提供
   できるようにしてくれます。
 
