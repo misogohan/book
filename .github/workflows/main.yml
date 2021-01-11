@@ -4,6 +4,7 @@ on:
     branches:
       - translation-ja
     paths:
+      - ".github/actions/workflows/main.yml"
       - "src/**"
       - "listings/**"
       - "redirects/**"
@@ -15,12 +16,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build
-        uses: ./.github/actions/build
+
+      - name: Setup mdBook
+        uses: peaceiris/actions-mdbook@v1
+        with:
+          mdbook-version: 'latest'
+
+      - run: mdbook build
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: misogohan/book
-          PUBLISH_BRANCH: translation-ja
-          PUBLISH_DIR: ./book
+          publish_branch: gh-pages-ja
+          publiah_dir: ./book
