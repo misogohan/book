@@ -17,10 +17,10 @@ would only use the part of Cargo that handles building your code. As you write
 more complex Rust programs, you’ll add dependencies, and if you start a project
 using Cargo, adding dependencies will be much easier to do.
 -->
-先程私たちが書いたような単純なプログラムでは、依存関係を持つことはありません。そのため、
-”Hello, world”プロジェクトをCargoで運用する場合は、コードのビルドにしか役に立ちません。
-しかしより複雑なプログラムを書く場合には、依存関係を追加したくなるでしょう。そのようなときは、
-Cargoを使ってプロジェクトを作りはじめれば、依存関係の追加がとても簡単になります。
+先程私たちが書いたような単純なプログラムは、依存関係を持つことはありません。そのため、”Hello,
+world”プロジェクトをCargoで運用する場合は、コードのビルドにしか役に立ちません。しかしより複雑な
+プログラムを書く場合には、依存関係を追加したくなるでしょう。そのようなときは、Cargoを使って
+プロジェクトを作りはじめれば、依存関係の追加がとても簡単になります。
 
 <!--
 Because the vast majority of Rust projects use Cargo, the rest of this book
@@ -30,8 +30,8 @@ used the official installers discussed in the
 through some other means, check whether Cargo is installed by entering the
 following into your terminal:
 -->
-Rustで書かれる大多数のプロジェクトはCargoを使っているため、本書でもここからは、Cargoを使うこと
-を前提に書かれます。[“Installation”][installation]で紹介されている通りにRustをインストール
+Rustで書かれる大多数のプロジェクトはCargoを使っているため、本書もここからは、Cargoを使うことを
+前提に書かれます。[“Installation”][installation]で紹介されている通りにRustをインストール
 していれば、Cargoは既にインストールされているはずです。他の方法でRustをインストールした場合は、
 このコマンドをターミナルで実行してCargoがインストールされているか確認してください。
 
@@ -74,7 +74,7 @@ our project *hello_cargo*, and Cargo creates its files in a directory of the
 same name.
 -->
 １行目のコマンドは、*hello_cargo*という新しいディレクトリを作成します。私たちがプロジェクトを
-*hello_cargo*と名付けたので、Cargoは同名のディレクトリ内にプロジェクトのファイルを生成します。
+*hello_cargo*と名付けたため、Cargoは同名のディレクトリ内にプロジェクトのファイルを生成します。
 
 <!--
 Go into the *hello_cargo* directory and list the files. You’ll see that Cargo
@@ -90,8 +90,8 @@ It has also initialized a new Git repository along with a *.gitignore* file.
 Git files won’t be generated if you run `cargo new` within an existing Git
 repository; you can override this behavior by using `cargo new --vcs=git`.
 -->
-Cargoは、Gitのリポジトリも初期化してくれており、*.gitignore*も生成されます。既に存在するGitの
-リポジトリ内で`cargo new`を実行する場合、Gitためのファイルは生成されません。この挙動は、
+Cargoは、Gitのリポジトリの初期化もしてくれており、*.gitignore*が生成されます。既に存在するGit
+のリポジトリ内で`cargo new`を実行する場合、Gitためのファイルは生成されません。この挙動は、
 `cargo new --vcs=git`とすることで回避できます。
 
 <!--
@@ -153,7 +153,7 @@ that information is not correct, fix the information now and then save the
 file. We’ll talk about the `edition` key in Appendix E.
 -->
 続く４行は、Cargoがプログラムをコンパイルする際に必要な情報である、名前、バージョン、作者、そして
-使用するRustのeditionを指定しています。Cargoはあなたの環境からあなたの名前とメールの情報を
+使用するRustのエディションを指定しています。Cargoはあなたの環境からあなたの名前とメールの情報を
 取得しているので、この情報が正しくない場合は、修正して保存してください。`edition`キーについては、
 付録Ｅで解説します。
 
