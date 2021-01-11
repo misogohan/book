@@ -28,5 +28,5 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: misogohan/book-ja
-          publish_branch: master
-          publiah_dir: ./book
+          publish_branch: main
+          publish_dir: ./book
