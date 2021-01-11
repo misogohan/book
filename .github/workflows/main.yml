@@ -28,6 +28,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: misogohan/book
-          publish_branch: gh-pages-ja
+          external_repository: misogohan/book-ja
+          publish_branch: master
           publiah_dir: ./book
