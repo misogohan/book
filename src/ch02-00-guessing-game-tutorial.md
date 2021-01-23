@@ -1,84 +1,170 @@
+<!--
 # Programming a Guessing Game
+-->
+# 数当てゲームのプログラミング
 
+<!--
 Let’s jump into Rust by working through a hands-on project together! This
 chapter introduces you to a few common Rust concepts by showing you how to use
 them in a real program. You’ll learn about `let`, `match`, methods, associated
 functions, using external crates, and more! The following chapters will explore
 these ideas in more detail. In this chapter, you’ll practice the fundamentals.
+-->
+実践的なプロジェクトを一緒に作りながら、Rustに挑戦していきましょう。この章では、
+いくつかのよく使うRustのコンセプトを、実際のプログラミングでどう使うかと共に紹介
+します。
 
+<!--
 We’ll implement a classic beginner programming problem: a guessing game. Here’s
 how it works: the program will generate a random integer between 1 and 100. It
 will then prompt the player to enter a guess. After a guess is entered, the
 program will indicate whether the guess is too low or too high. If the guess is
 correct, the game will print a congratulatory message and exit.
+-->
+入門者のプログラミング課題として古典的な数当てゲームの実装をします。このゲームは
+次のように進行します。１から１００までから、ランダムに整数を生成する。プレイヤー
+に推測した数を入力するよう促す。入力されたら、その数が正解よりもtoo low
+（小さい）かtoo high（大きい）かを表示する。もし当たっていたら、お祝いの
+メッセージを表示して終了する。
 
+<!--
 ## Setting Up a New Project
+-->
+## 新しいプロジェクトの設定
 
+<!--
 To set up a new project, go to the *projects* directory that you created in
 Chapter 1 and make a new project using Cargo, like so:
+-->
+新しいプロジェクトを設定するために、第１章で作った*projects*に行き、Cargoを
+用いて新しいプロジェクトをこのように作りましょう。
+
 
 ```console
 $ cargo new guessing_game
 $ cd guessing_game
 ```
 
+<!--
 The first command, `cargo new`, takes the name of the project (`guessing_game`)
 as the first argument. The second command changes to the new project’s
 directory.
+-->
+１つ目のコマンド`cargo new`は、プロジェクト名（`guessing_game`）を引数に取って
+います。２つ目のコマンドで、新しく作ったプロジェクトのディレクトリに移っています
+。
 
+<!--
 Look at the generated *Cargo.toml* file:
+-->
+生成された*Cargo.toml*ファイルを見てください。
 
+<!--
 <span class="filename">Filename: Cargo.toml</span>
+-->
+<span class="filename">ファイル名：Cargo.toml</span>
 
 ```toml
 {{#include ../listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/Cargo.toml}}
 ```
 
+<!--
 If the author information that Cargo obtained from your environment is not
 correct, fix that in the file and save it again.
+-->
+もしCargoがあなたの環境から取得してきた作成者情報が誤っているならば、修正して
+保存してください。
 
+<!--
 As you saw in Chapter 1, `cargo new` generates a “Hello, world!” program for
 you. Check out the *src/main.rs* file:
+-->
+第１章で見たように、`cargo new`は”Hello, world!”プログラムを生成してくれています
+。*src/main.rs*を開きましょう。
 
+<!--
 <span class="filename">Filename: src/main.rs</span>
+-->
+<span class="filename">ファイル名：src/main.rs</span>
 
 ```rust
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/src/main.rs}}
 ```
 
+<!--
 Now let’s compile this “Hello, world!” program and run it in the same step
 using the `cargo run` command:
+-->
+では、この”Hello, world!”のコンパイルと実行を`cargo run`という一つのコマンドで
+してみましょう。
 
 ```console
 {{#include ../listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/output.txt}}
 ```
 
+<!--
 The `run` command comes in handy when you need to rapidly iterate on a project,
 as we’ll do in this game, quickly testing each iteration before moving on to
 the next one.
+-->
+`run`コマンドは今回のゲーム作成のように、試行錯誤をしながらプロジェクトを迅速に
+進め、各段階で次に進む前に素早くテストをする必要があるときに便利です。
 
+<!--
+訳考：原文ではiterate, iterationという単語が使われていますが、この単語は
+アジャイル開発の文脈で使われる言葉で、開発のサイクル及びそれを進めていくことを
+意味します。アジャイル開発の日本語文献を当たり、適当な日本語を検討しましたが、
+人口に膾炙したものとは（私の観測範囲では）思えなかったので、ノーコンテクストで
+意味の通じる訳にしました。
+-->
+
+<!--
 Reopen the *src/main.rs* file. You’ll be writing all the code in this file.
+-->
+*src/main.rs/*ファイルを再び開きましょう。このプロジェクトではコードは全てこの
+ファイルに書いていきます。
 
+<!--
 ## Processing a Guess
+-->
+## 予想の入力処理
 
+<!--
 The first part of the guessing game program will ask for user input, process
 that input, and check that the input is in the expected form. To start, we’ll
 allow the player to input a guess. Enter the code in Listing 2-1 into
 *src/main.rs*.
+-->
+数当てゲームが最初にすることは、ユーザーに入力を促し、受け取った入力を加工して、
+その入力が規定の形式を満たしているかを確認することです。まずは、プレイヤーが予想
+を入力できるようにしましょう。リスト２−１のコードを*src/main.rs*に打ち込んで
+ください。
 
+<!--
 <span class="filename">Filename: src/main.rs</span>
+-->
+<span class="filename">ファイル名：src/main.rs</span>
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:all}}
 ```
 
+<!--
 <span class="caption">Listing 2-1: Code that gets a guess from the user and
 prints it</span>
+-->
+<span class="caption">リスト：予想をユーザーから受け取って出力するコード</span>
 
+<!--
 This code contains a lot of information, so let’s go over it line by line. To
 obtain user input and then print the result as output, we need to bring the
 `io` (input/output) library into scope. The `io` library comes from the
 standard library (which is known as `std`):
+-->
+このコードにはたくさんの情報が含まれていますので、一行一行進んでいきましょう。
+ユーザーの入力を取得してその結果を出力するために、`io`(input/output：入出力)
+ライブラリーをスコープに入れる必要があります。`io`ライブラリーは、標準ライブラリ
+（`std`としても知られている）から提供されています。
 
 ```rust,ignore
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/listing-02-01/src/main.rs:io}}
