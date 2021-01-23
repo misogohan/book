@@ -8,16 +8,17 @@ The first step is to install Rust. We’ll download Rust through `rustup`, a
 command line tool for managing Rust versions and associated tools. You’ll need
 an internet connection for the download.
 -->
-Rustをインストールするための最初のステップは、Rust自体のバージョンや関連するツールを管理するため
-のコマンドラインツールである`rustup`を通して、Rustをダウンロードすることです。ダウンロードには
-インターネット接続が必要です。
+Rustをインストールするための最初のステップは、Rust自体のバージョンや関連する
+ツールを管理するためのコマンドラインツールである`rustup`を通して、Rustを
+ダウンロードすることです。ダウンロードにはインターネット接続が必要です。
 
 <!--
 > Note: If you prefer not to use `rustup` for some reason, please see [the Rust
 > installation page](https://www.rust-lang.org/tools/install) for other options.
 -->
-> 注意：何かしらの理由で`rustup`を使いたくない場合は、[the Rust installation page（英語）
-> ](https://www.rust-lang.org/tools/install) を読んで他の方法を確認してください。
+> 注意：何かしらの理由で`rustup`を使いたくない場合は、[the Rust installation
+> page（英語）](https://www.rust-lang.org/tools/install)を読んで他の方法を確認
+> してください。
 
 <!--
 The following steps install the latest stable version of the Rust compiler.
@@ -27,11 +28,12 @@ differ slightly between versions, because Rust often improves error messages
 and warnings. In other words, any newer, stable version of Rust you install
 using these steps should work as expected with the content of this book.
 -->
-その次に、最新の安定版Rustコンパイラをインストールします。Rustの安定性の保証のおかげで、新しい
-バージョンのコンパイラであっても、本書でコンパイルできる例として掲載しているものはすべて、継続して
-コンパイル可能です。コンパイラの出力は、僅かではありますが異なることがあります。これは、Rustが
-エラーメッセージや警告の文章をしばしば改善するためです。言い換えれば、1.48以降の安定版バージョンの
-Rustであれば、どれをインストールしても本書の想定通りに進められるということです。
+その次に、最新の安定版Rustコンパイラをインストールします。Rustの安定性の保証の
+おかげで、新しいバージョンのコンパイラであっても、本書でコンパイルできる例として
+掲載しているものはすべて、継続してコンパイル可能です。コンパイラの出力は、僅か
+ではありますが異なることがあります。これは、Rustがエラーメッセージや警告の文章を
+しばしば改善するためです。言い換えれば、1.48以降の安定版バージョンのRustであれば
+、どれをインストールしても本書の想定通りに進められるということです。
 
 <!--
 > ### Command Line Notation
@@ -45,10 +47,11 @@ Rustであれば、どれをインストールしても本書の想定通りに�
 -->
 > ### コマンドラインの表記法
 > 
-> この章、そして本書全体を通して、ターミナルで実行するコマンドを例示することがあります。ターミナル
-> で実行するべき行はすべて`$`から始まっていますが、`$`を入力する必要はありません。`$`はコマンド
-> の始まりを示すための文字です。また、`$`から始まっていない行は、基本的に直前に実行したコマンドの
-> 出力です。一方PowerShell用の例では、`$`の代わりに`>`が用いられます。
+> この章、そして本書全体を通して、ターミナルで実行するコマンドを例示することが
+> あります。ターミナルで実行するべき行はすべて`$`から始まっていますが、`$`を入力
+> する必要はありません。`$`はコマンドの始まりを示すための文字です。また、`$`から
+> 始まっていない行は、基本的に直前に実行したコマンドの出力です。一方PowerShell用
+> の例では、`$`の代わりに`>`が用いられます。
 
 <!--
 ### Installing `rustup` on Linux or macOS
@@ -85,11 +88,12 @@ the correct linker. Check your platform’s documentation for how to install a C
 compiler. Also, some common Rust packages depend on C code and will need a C
 compiler. Therefore, it might be worth installing one now.
 -->
-加えて、なにかしらのリンカが必要です。多くの場合既にインストールされていると思いますが、Rustで
-書いたプログラムを実際にコンパイルしてみようとして、リンカを実行できないというエラーが表示される
-場合は、その環境にリンカがインストールされていないということなので、手動でインストールする必要が
-あります。通常、C言語のコンパイラには適切なリンカがついてきます。さらに、よく使用されるRustの
-パッケージには、C言語のコードに依存しているものがあります。C言語のコンパイラを今のうちから
+加えて、なにかしらのリンカが必要です。多くの場合既にインストールされていると思い
+ますが、Rustで書いたプログラムを実際にコンパイルしてみようとして、リンカを実行
+できないというエラーが表示される場合は、その環境にリンカがインストールされて
+いないということなので、手動でインストールする必要があります。通常、C言語の
+コンパイラには適切なリンカがついてきます。さらに、よく使用されるRustのパッケージ
+には、C言語のコードに依存しているものがあります。C言語のコンパイラを今のうちから
 インストールしておく価値は、あるでしょう。
 
 <!--
@@ -106,12 +110,12 @@ install [Build Tools for Visual Studio 2019][visualstudio]. When asked which
 workloads to install make sure "C++ build tools" is selected and that the 
 Windows 10 SDK and the English language pack components are included.
 -->
-Windowsへのインストールは、[https://www.rust-lang.org/ja/tools/install][install]の
-指示にしたがって行ってください。インストールに際して、Visual Studio 2013以降用の
-C++ビルドツールが必要だというメッセージが表示されるでしょう。最も簡単に入手する方法は、[Build
-Tools for Visual Studio 2019][visualstudio]をインストールすることです。どれを
-インストールするか尋ねられたら、"C++ build tools"が選択されていて、Windows 10 SDKと英語の
-言語パックが含まれていることを確認してください。
+Windowsへのインストールは、[https://www.rust-lang.org/ja/tools/install][install]
+の指示にしたがって行ってください。インストールに際して、Visual Studio 2013以降用
+のC++ビルドツールが必要だというメッセージが表示されるでしょう。最も簡単に
+入手する方法は、[Build Tools for Visual Studio 2019][visualstudio]をインストール
+することです。どれをインストールするか尋ねられたら、"C++ build tools"が選択され
+ていて、Windows 10 SDKと英語の言語パックが含まれていることを確認してください。
 
 <!--
 [install]: https://www.rust-lang.org/tools/install
@@ -123,8 +127,8 @@ Tools for Visual Studio 2019][visualstudio]をインストールすることで�
 The rest of this book uses commands that work in both *cmd.exe* and PowerShell.
 If there are specific differences, we’ll explain which to use.
 -->
-以降のコマンドは、*cmd.exe*とPowerShellのどちらでも実行可能です。明確な違いがあるところでは、
-*cmd.exe*とPowerShellのどちらを使うべきか説明します。
+以降のコマンドは、*cmd.exe*とPowerShellのどちらでも実行可能です。明確な違いが
+あるところでは、*cmd.exe*とPowerShellのどちらを使うべきか説明します。
 
 <!--
 ### Updating and Uninstalling
@@ -135,8 +139,8 @@ If there are specific differences, we’ll explain which to use.
 After you’ve installed Rust via `rustup`, updating to the latest version is
 easy. From your shell, run the following update script:
 -->
-`rustup`を通じてRustをインストールした場合、最新のバージョンへの更新は簡単に行なえます。シェル
-からこのスクリプトを実行してください
+`rustup`を通じてRustをインストールした場合、最新のバージョンへの更新は簡単に
+行なえます。シェルからこのスクリプトを実行してください
 
 ```console
 $ rustup update
@@ -146,7 +150,8 @@ $ rustup update
 To uninstall Rust and `rustup`, run the following uninstall script from your
 shell:
 -->
-Rustと`rustup`をアンインストールするためには、このスクリプトをシェルから実行してください。
+Rustと`rustup`をアンインストールするためには、このスクリプトをシェルから実行して
+ください。
 
 ```console
 $ rustup self uninstall
@@ -161,7 +166,8 @@ $ rustup self uninstall
 To check whether you have Rust installed correctly, open a shell and enter this
 line:
 -->
-正しくRustがインストールされているかを確かめるために、シェルを開いてこの通りに入力してください。
+正しくRustがインストールされているかを確かめるために、シェルを開いてこの通りに
+入力してください。
 
 ```console
 $ rustc --version
@@ -171,7 +177,8 @@ $ rustc --version
 You should see the version number, commit hash, and commit date for the latest
 stable version that has been released in the following format:
 -->
-バージョン番号とそのリリースのコミットのハッシュと日付が、以下の形式で出力されるはずです。
+バージョン番号とそのリリースのコミットのハッシュと日付が、以下の形式で出力される
+はずです。
 
 ```text
 rustc x.y.z (abcabcabc yyyy-mm-dd)
@@ -186,12 +193,13 @@ a number of places you can get help. The easiest is the #beginners channel on
 (a silly nickname we call ourselves) who can help you out. Other great
 resources include [the Users forum][users] and [Stack Overflow][stackoverflow].
 -->
-この通りに出力されていれば、Rustのインストールは正常に完了したということになります。Windowsを
-使っていてこの通りに出力されていない場合は、Rustが`%PATH%`環境変数に含まれていることを確認して
-ください。問題ないのにそれでもRustが動かないときは、助けを得られる場所がいくつかあります。最も
-簡単なのは、[Rust公式Discord][discord]の #beginners チャンネルです。ここでは、あなたを
-助けてくれるRustacean（Rustユーザーが自分たちを指して呼ぶときのニックネーム）たちとチャット
-できます。その他の素晴らしい情報源として、[ユーザーフォーラム][users]と[Stack Overflow
+この通りに出力されていれば、Rustのインストールは正常に完了したということになり
+ます。Windowsを使っていてこの通りに出力されていない場合は、Rustが`%PATH%`
+環境変数に含まれていることを確認してください。問題ないのにそれでもRustが動かない
+ときは、助けを得られる場所がいくつかあります。最も簡単なのは、[Rust公式Discord
+][discord]の #beginners チャンネルです。ここでは、あなたを助けてくれるRustacean
+（Rustユーザーが自分たちを指して呼ぶときのニックネーム）たちとチャットできます。
+その他の素晴らしい情報源として、[ユーザーフォーラム][users]と[Stack Overflow
 ][stackoverflow]があります。
 
 [discord]: https://discord.gg/rust-lang
@@ -208,13 +216,15 @@ The installation of Rust also includes a copy of the documentation locally, so
 you can read it offline. Run `rustup doc` to open the local documentation in
 your browser.
 -->
-Rustのインストールの際には、ドキュメントのローカルのコピーもついてくるので、オフラインでも読むこと
-ができます。ローカルのドキュメントを開くには、`rustup doc`を実行してください。
+Rustのインストールの際には、ドキュメントのローカルのコピーもついてくるので、
+オフラインでも読むことができます。ローカルのドキュメントを開くには、`rustup doc`
+を実行してください。
 
 <!--
 Any time a type or function is provided by the standard library and you’re not
 sure what it does or how to use it, use the application programming interface
 (API) documentation to find out!
 -->
-標準ライブラリから提供されている型や関数が、何をするものでどのように使えばよいのか解らないときは、
-アプリケーション・プログラミング・インターフェース（API）ドキュメントを使って調べてみましょう！
+標準ライブラリから提供されている型や関数が、何をするものでどのように使えばよい
+のか解らないときは、アプリケーション・プログラミング・インターフェース（API）
+ドキュメントを使って調べてみましょう！
